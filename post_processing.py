@@ -102,7 +102,7 @@ class RetinaFace:
         blob = torch.Tensor(blob)
         mod = Insightface()
         
-        wgt_file = torch.load('C:/WeightCenter/insightface/insightface_retina.pth', map_location='cpu')
+        wgt_file = torch.load('weights/insightface_retina.pth', map_location='cpu')
 
         mod.load_state_dict(wgt_file)
         mod.eval()
